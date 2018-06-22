@@ -1,0 +1,108 @@
+create databases AFDS;
+
+create table mainboard( 主板表
+    id varchar(50) COLLATE utf8mb4_hu_0900_ai_ci NOT NULL DEFAULT 'uuid()',
+    brands 品牌名             
+    name 系列名
+    model 产品型号名
+    price 价格
+    main_chipset 主芯片组
+    audio_chip 音频芯片
+    memory_type 内存类型
+    max_memory_capacity 最大内存容量
+    motherboard_type 主板版型
+    shape_size 外形尺寸
+    power_supply_socket 电源插口
+    power_supply_mode 供电模式
+);
+
+create table memorybar( 内存条表
+    id varchar(50) COLLATE utf8mb4_hu_0900_ai_ci NOT NULL DEFAULT 'uuid()',
+    brands品牌名
+    name系列名
+    model产品型号名
+    price价格
+    applicable_type适用类型
+    memory_capacity内存容量
+    memory_type内存类型
+    main_frequency_of_memory内存主频
+);
+
+create table cpu( CPU表
+    id varchar(50) COLLATE utf8mb4_hu_0900_ai_ci NOT NULL DEFAULT 'uuid()',
+    brands品牌名
+    name系列名
+    model产品型号名
+    price价格
+    applicable_type适用类型
+    cpu_series CPU系列
+    cpu_main_frequency CPU主频
+    ghz最大睿频
+    slot_type插槽类型
+    two_level_caching二级缓存
+    core_quantity核心数量
+    thread_number线程数
+);
+
+create table videocard( 显卡表
+    id varchar(50) COLLATE utf8mb4_hu_0900_ai_ci NOT NULL DEFAULT 'uuid()',
+    brands品牌名
+    name系列名
+    model产品型号名
+    price价格
+    graphics_card_type显卡类型
+    video_card_chip显卡芯片
+    core_frequency核心频率
+    memory_frequency显存频率
+    memory_capacity显存容量
+    memory_interface显存位宽
+    power_interface电源接口
+    power_supply_mode供电模式
+);
+
+create table harddisk( 硬盘表
+    id varchar(50) COLLATE utf8mb4_hu_0900_ai_ci NOT NULL DEFAULT 'uuid()',
+    brands品牌名
+    name系列名
+    model产品型号名
+    price价格
+
+    type 硬盘类型 固态/普通
+
+    、、固态参数：
+    storage_capacity固态存储容量
+    harddisk_size固态硬盘尺寸
+    Interface_type固态接口类型
+    cache固态缓存
+    rwspeed固态读写速度
+    wspeed固态写入速度
+    fault_free_time固态平均无故障时间
+    search_time固态平均寻道时间
+
+    、、普通硬盘参数：
+    applicable_type普通硬盘适用类型
+    harddisk_size_p普通硬盘尺寸
+    harddisk_capacity普通硬盘容量
+    single_disk_capacity普通硬盘单碟容量
+    cache_p普通硬盘缓存
+    speed普通硬盘转速
+    interface_type_p普通硬盘接口类型
+    interface_rate普通硬盘接口速率    
+);
+
+create table power( 电源表
+    id varchar(50) COLLATE utf8mb4_hu_0900_ai_ci NOT NULL DEFAULT 'uuid()',
+    brands品牌名
+    name系列名
+    model产品型号名
+    price价格
+    
+    power_type电源类型
+    out_line_type出线类型
+    rated_power额定功率
+    max_power最大功率
+    motherboard_interface主板接口
+    hard_disk_interface硬盘接口
+    pfc_type  PFC类型
+    conversion_efficiency转换效率
+);

@@ -66,18 +66,19 @@ for key in url_dict:
                     price = soup.select('.price-type')[0].get_text()
                     all_li = soup.select('.section-content')[0].find('ul').find_all('li')
                     # 获取数据
-                    print(key)  # 品牌名
-                    print(name)  # 系列名
-                    print(idname)  # 产品型号名
-                    print(price)  # 价格
-                    print(all_li[0].find_all('p')[0].get_text().split("：")[1])  # 主芯片组
-                    print(all_li[0].find_all('p')[1].get_text().split("：")[1])  # 音频芯片
-                    print(all_li[1].find_all('p')[0].get_text().split("：")[1])  # 内存类型
-                    print(all_li[1].find_all('p')[1].get_text().split("：")[1])  # 最大内存容量
-                    print(all_li[2].find_all('p')[0].get_text().split("：")[1])  # 主板版型
-                    print(all_li[2].find_all('p')[1].get_text().split("：")[1])  # 外形尺寸
-                    print(all_li[3].find_all('p')[0].get_text().split("：")[1])  # 电源插口
-                    print(all_li[3].find_all('p')[1].get_text().split("：")[1])  # 供电模式
-                    print()
+                    brands = key  # 品牌名
+                    name  # 系列名
+                    model = idname  # 产品型号名
+                    price  # 价格
+                    main_chipset = all_li[0].find_all('p')[0].get_text().split("：")[1]  # 主芯片组
+                    audio_chip = all_li[0].find_all('p')[1].get_text().split("：")[1]  # 音频芯片
+                    memory_type = all_li[1].find_all('p')[0].get_text().split("：")[1]  # 内存类型
+                    max_memory_capacity = all_li[1].find_all('p')[1].get_text().split("：")[1]  # 最大内存容量
+                    motherboard_type = all_li[2].find_all('p')[0].get_text().split("：")[1]  # 主板版型
+                    shape_size = all_li[2].find_all('p')[1].get_text().split("：")[1]  # 外形尺寸
+                    power_supply_socket = all_li[3].find_all('p')[0].get_text().split("：")[1]  # 电源插口
+                    power_supply_mode = all_li[3].find_all('p')[1].get_text().split("：")[1]  # 供电模式
+                    sql_insert = "insert into mainboard(brands, name, model, price, main_chipset, audio_chip, memory_type, max_memory_capacity, motherboard_type, shape_size, power_supply_socket, power_supply_mode) values('{0}','{1}','{2}',{3},'{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}');".format(brands, name, model, price, main_chipset, audio_chip, memory_type, max_memory_capacity, motherboard_type, shape_size, power_supply_socket, power_supply_mode)
+                    print(sql_insert)
                 except Exception as e:
                     pass
