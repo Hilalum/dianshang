@@ -1,4 +1,4 @@
-# ------------------------------------------------------------
+﻿# ------------------------------------------------------------
 # ------------------------------------------------------------
 # --------------------   主板信息爬虫   ----------------------
 # ------------------------------------------------------------
@@ -81,5 +81,7 @@ for key in url_dict:
                     print(all_li[3].find_all('p')[0].get_text().split("：")[1])  # 电源插口
                     print(all_li[3].find_all('p')[1].get_text().split("：")[1])  # 供电模式
                     print()
+		sql="'select model case when model=idname then (update mainboard set (brands,name,mode,ramnum,ssdnum,size,powernum,powermodel,cpumodel,cpunum) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s))else (insert into mainboard (brands,name,model,ramnum,ssdnum,size,powernum,powermodel,cpumodel,cpunum) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)) end from mainboard'% (key,name,idname,0,0,0,all_li[2].find_all('p')[1].get_text().split("：")[1],all_li[3].find_all('p')[0].get_text().split("：")[1],all_li[3].find_all('p')[1].get_text().split("：")[1],0,0)"
+
                 except Exception as e:
                     pass
