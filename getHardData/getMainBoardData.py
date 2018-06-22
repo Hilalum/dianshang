@@ -4,6 +4,7 @@
 # ------------------------------------------------------------
 # ------------------------------------------------------------
 
+import uuid
 import urllib.request
 from bs4 import BeautifulSoup
 
@@ -66,6 +67,7 @@ for key in url_dict:
                     price = soup.select('.price-type')[0].get_text()
                     all_li = soup.select('.section-content')[0].find('ul').find_all('li')
                     # 获取数据
+                    print(uuid.uuid1())  # uuid
                     print(key)  # 品牌名
                     print(name)  # 系列名
                     print(idname)  # 产品型号名
