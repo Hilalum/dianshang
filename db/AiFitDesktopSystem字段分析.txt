@@ -14,6 +14,7 @@ create table mainboard( 主板表
     shape_size 外形尺寸
     power_supply_socket 电源插口
     power_supply_mode 供电模式
+    img 图片路径
 );
 
 create table memorybar( 内存条表
@@ -26,6 +27,7 @@ create table memorybar( 内存条表
     memory_capacity内存容量
     memory_type内存类型
     main_frequency_of_memory内存主频
+    img 图片路径
 );
 
 create table cpu( CPU表
@@ -42,6 +44,7 @@ create table cpu( CPU表
     two_level_caching二级缓存
     core_quantity核心数量
     thread_number线程数
+    img 图片路径
 );
 
 create table videocard( 显卡表
@@ -58,6 +61,7 @@ create table videocard( 显卡表
     memory_interface显存位宽
     power_interface电源接口
     power_supply_mode供电模式
+    img 图片路径
 );
 
 create table harddisk( 硬盘表
@@ -88,6 +92,7 @@ create table harddisk( 硬盘表
     speed普通硬盘转速
     interface_type_p普通硬盘接口类型
     interface_rate普通硬盘接口速率    
+    img 图片路径
 );
 
 create table power( 电源表
@@ -105,4 +110,5 @@ create table power( 电源表
     hard_disk_interface硬盘接口
     pfc_type  PFC类型
     conversion_efficiency转换效率
+    img 图片路径
 );

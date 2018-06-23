@@ -24,7 +24,7 @@ THREADS.append(threading.Thread(target=startToGetMemorybarData));
 THREADS.append(threading.Thread(target=startToGetPowerData));
 THREADS.append(threading.Thread(target=startToGetVideocardData));
 THREADS.append(threading.Thread(target=writeInMysql));
-
+0
 for t in THREADS:
     t.setDaemon(True);
     t.start();
