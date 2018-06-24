@@ -13,11 +13,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainboardActionData.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MemorybarActionData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/MemorybarActionData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PowerActionData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/PowerActionData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="213" column="5" lean-forward="true" selection-start-line="74" selection-start-column="3" selection-end-line="213" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideocardActionData.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/VideocardActionData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="593">
+              <caret line="210" column="35" selection-start-line="210" selection-start-column="35" selection-end-line="210" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainboardActionData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/MainboardActionData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="385">
+              <caret line="205" column="59" selection-start-line="205" selection-start-column="59" selection-end-line="205" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,6 +75,14 @@
       <find>CpuEntity</find>
       <find>harddiskService</find>
       <find>HarddiskEntity</find>
+      <find>mainboardDao</find>
+      <find>memorybarDao</find>
+      <find>mainboardService</find>
+      <find>memorybarService</find>
+      <find>MainboardEntity</find>
+      <find>MemorybarEntity</find>
+      <find>powerService</find>
+      <find>PowerEntity</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -56,9 +97,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zhgy/entity/CpuEntity.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhgy/dao/MemorybarEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/dao/MemorybarDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/dao/PowerDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/dao/VideocardDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhgy/util/GetSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhgy/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
@@ -74,6 +112,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zhgy/service/MainboardService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/HarddiskActionData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/MainboardActionData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/dao/MemorybarDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/dao/PowerDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/dao/VideocardDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/service/MemorybarService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/service/VideocardService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/service/PowerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/PowerActionData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/MemorybarActionData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/VideocardActionData.java" />
       </list>
     </option>
   </component>
@@ -86,7 +133,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1240" />
     <option name="height" value="877" />
@@ -367,7 +414,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529745407507</updated>
-      <workItem from="1529745410759" duration="28057000" />
+      <workItem from="1529745410759" duration="29963000" />
     </task>
     <servers />
   </component>
@@ -392,10 +439,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28057000" />
+    <option name="totallyTimeSpent" value="29963000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <frame x="-7" y="0" width="1240" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -416,11 +463,11 @@
       <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" x="527" y="256" width="545" height="357" id="消息" order="1" type="FLOATING" weight="0.3291536" />
       <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="运行" order="3" visible="true" weight="0.04111406" />
+      <window_info anchor="bottom" id="运行" order="3" visible="true" weight="0.041610736" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="right" id="控制板" order="0" />
       <window_info id="Persistence" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.23200513" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.3059322" />
       <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -564,36 +611,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/publicStyle-nav.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/dao/MemorybarDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/dao/PowerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/dao/VideocardDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/entity/VideocardEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -695,50 +712,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/dao/HarddiskDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="132" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="132" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/dao/MainboardDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/service/CpuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="75" column="73" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="75" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/service/MainboardService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="75" column="70" selection-start-line="75" selection-start-column="58" selection-end-line="75" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -752,10 +729,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/service/CpuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="922">
+          <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/dao/HarddiskDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="132" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="132" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/dao/MemorybarDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/dao/PowerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="129" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="129" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/dao/MainboardDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="133" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="133" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/dao/VideocardDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/service/VideocardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#831#839#0" expanded="true" />
+            <element signature="e#883#891#0" expanded="true" />
+            <element signature="e#1257#1265#0" expanded="true" />
+            <element signature="e#1309#1317#0" expanded="true" />
+            <element signature="e#1721#1729#0" expanded="true" />
+            <element signature="e#1773#1781#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/service/PowerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/service/MainboardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/service/MemorybarService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/MainboardActionData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="385">
+          <caret line="205" column="59" selection-start-line="205" selection-start-column="59" selection-end-line="205" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/MemorybarActionData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/PowerActionData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="213" column="5" lean-forward="true" selection-start-line="74" selection-start-column="3" selection-end-line="213" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zhgy/actiondata/VideocardActionData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="210" column="35" selection-start-line="210" selection-start-column="35" selection-end-line="210" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
