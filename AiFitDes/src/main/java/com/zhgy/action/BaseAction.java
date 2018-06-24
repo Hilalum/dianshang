@@ -1,8 +1,5 @@
 package com.zhgy.action;
 
-import com.zhgy.entity.CpuEntity;
-import com.zhgy.service.CpuService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,9 +10,6 @@ import java.util.List;
 
 @Controller
 public class BaseAction {
-	
-	@Autowired
-	private CpuService cpuService;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String openMain(Model model){
