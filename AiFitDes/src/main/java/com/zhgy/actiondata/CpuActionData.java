@@ -52,8 +52,21 @@ import java.util.List;
  *         请求类型：POST
  *         说明：该方法返回按照选择的条件返回相应的CPU信息
  *
+ *     6.deleteById(id)
+ *         访问地址：.../cpu/delete_by_id
+ *         携带参数：id - 需要删除的id
+ *         请求类型：POST
+ *         说明：该方法返回一个字符串，字符串的格式为 信号#原因 例：success#删除成功！或 error#删除失败！原因。。。
+ *               开发者使用时首先对返回值进行split('#')处理，先判断split('#')[0]的状态，在输出split('#')[1]中的提示。
+ *               split('#')[0] = success为删除成功，split('#')[1] = error为删除失败
+ *
+ *     7.getOneById(id)
+ *         访问地址： .../cpu/get_one_by_id
+ *         携带参数：id - 需要查询的id
+ *         请求类型：POST
+ *         说明：该方法按照ID返回一个CPU的信息。如没有找到相关数据，返回空JSON列表。
+ *
  * */
-
 
 @Controller
 @RequestMapping(value = "/cpu", method = RequestMethod.POST)
@@ -159,6 +172,44 @@ public class CpuActionData {
             jo.put("img", ce.getImg());
             jsonArray.put(jo);
         }
+        return jsonArray.toString();
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/delete_by_id", method = RequestMethod.POST)
+    public String deleteById(@RequestParam("id") String id, Model model){
+        cpuService.deleteById(id);
+        if(cpuService.getCPUById(id) == null){
+            return "success#删除成功！";
+        }
+        return "error#删除失败！";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/get_one_by_id", method = RequestMethod.POST)
+    public String getOneById(@RequestParam("id") String id, Model model){
+        CpuEntity ce = cpuService.getCPUById(id);
+        JSONArray jsonArray = new JSONArray();
+        JSONObject jo = new JSONObject();
+        if(ce == null){
+            jsonArray.put(jo);
+            return jsonArray.toString();
+        }
+        jo.put("id", ce.getId());
+        jo.put("brands", ce.getBrands());
+        jo.put("name", ce.getName());
+        jo.put("model", ce.getModel());
+        jo.put("price", ce.getPrice());
+        jo.put("applicable_type", ce.getApplicableType());
+        jo.put("cpu_series", ce.getCpuSeries());
+        jo.put("cpu_main_frequency", ce.getCpuMainFrequency());
+        jo.put("ghz", ce.getGhz());
+        jo.put("slot_type", ce.getSlotType());
+        jo.put("two_level_caching", ce.getTwoLevelCaching());
+        jo.put("core_quantity", ce.getCoreQuantity());
+        jo.put("thread_number", ce.getThreadNumber());
+        jo.put("img", ce.getImg());
+        jsonArray.put(jo);
         return jsonArray.toString();
     }
 }

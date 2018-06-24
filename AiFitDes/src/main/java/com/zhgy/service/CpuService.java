@@ -69,4 +69,9 @@ public class CpuService {
         return (ArrayList<CpuEntity>) sqlQuery.list();
     }
 
+    // 该方法提供了按照id删除一个CPU
+    public void deleteById(String id){  cpuDao.delete(id); }
+
+    // 该方法提供了按照ID查询一个CPU的方法
+    public CpuEntity getCPUById(String id) { return cpuDao.findOne(id); }
 }
