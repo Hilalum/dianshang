@@ -19,12 +19,6 @@ public class BaseAction {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String openMain(Model model){
-		Integer now_page = 1;
-		Integer page_size = 100;
-		List<CpuEntity> list = cpuService.getCPUByCondition("price<1000", now_page, page_size);
-		for(int i=0; i<list.size(); i++){
-			System.out.println(list.get(i).getId() + " " + list.get(i).getPrice());
-		}
 		return "index";
 	}
 

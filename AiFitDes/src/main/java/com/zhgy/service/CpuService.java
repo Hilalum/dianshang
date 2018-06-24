@@ -59,6 +59,7 @@ public class CpuService {
         return cpuDao.findAll(pageRequest).getContent();
     }
 
+    // 该方法返回按条件分页查询的结果。where_context-查询条件。page-想返回的页数。size-返回的页数中最多有多少数据
     public ArrayList<CpuEntity> getCPUByCondition(String where_context, Integer start_num, Integer page_size){
         start_num = (--start_num) * page_size;
         Session session = GetSession.getSession();
