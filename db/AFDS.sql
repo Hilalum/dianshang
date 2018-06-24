@@ -24,7 +24,7 @@ CREATE TABLE `cpu` (
   `brands` varchar(255) DEFAULT NULL COMMENT '品牌名',
   `name` varchar(255) DEFAULT NULL COMMENT '系列名',
   `model` varchar(255) DEFAULT NULL COMMENT '产品型号名',
-  `price` decimal(10,2) DEFAULT NULL COMMENT '价格',
+  `price` varchar(255) DEFAULT NULL COMMENT '价格',
   `applicable_type` varchar(255) DEFAULT NULL COMMENT '适用类型',
   `cpu_series` varchar(255) DEFAULT NULL COMMENT '系列',
   `cpu_main_frequency` varchar(255) DEFAULT NULL COMMENT 'CPU主频',
@@ -32,7 +32,8 @@ CREATE TABLE `cpu` (
   `slot_type` varchar(255) DEFAULT NULL COMMENT '插槽类型',
   `two_level_caching` varchar(255) DEFAULT NULL COMMENT '二级缓存',
   `core_quantity` varchar(255) DEFAULT NULL COMMENT '核心数量',
-  `thread_number` int(11) DEFAULT NULL COMMENT '线程数',
+  `thread_number` varchar(255) DEFAULT NULL COMMENT '线程数',
+  `img` varchar(255) DEFAULT NULL COMMENT '图片地址',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -45,7 +46,7 @@ CREATE TABLE `harddisk` (
   `brands` varchar(255) DEFAULT NULL COMMENT '品牌名',
   `name` varchar(255) DEFAULT NULL COMMENT '系列名',
   `model` varchar(255) DEFAULT NULL COMMENT '产品型号名',
-  `price` decimal(10,2) DEFAULT NULL COMMENT '价格',
+  `price` varchar(255) DEFAULT NULL COMMENT '价格',
   `type` varchar(255) DEFAULT NULL COMMENT '硬盘类型 固态/普通',
   `storage_capacity` varchar(255) DEFAULT NULL COMMENT '固态存储容量',
   `harddisk_size` varchar(255) DEFAULT NULL COMMENT '固态硬盘尺寸',
@@ -63,6 +64,7 @@ CREATE TABLE `harddisk` (
   `speed` varchar(255) DEFAULT NULL COMMENT '普通硬盘转速',
   `interface_type_p` varchar(255) DEFAULT NULL COMMENT '普通硬盘接口类型',
   `interface_rate` varchar(255) DEFAULT NULL COMMENT '普通硬盘接口速率',
+  `img` varchar(255) DEFAULT NULL COMMENT '图片地址',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='硬盘表';
 
@@ -75,7 +77,7 @@ CREATE TABLE `mainboard` (
   `brands` varchar(255) DEFAULT NULL COMMENT '品牌名',
   `name` varchar(255) DEFAULT NULL COMMENT '系列名',
   `model` varchar(255) DEFAULT NULL COMMENT '产品型号名',
-  `price` decimal(10,2) DEFAULT NULL COMMENT '价格',
+  `price` varchar(255) DEFAULT NULL COMMENT '价格',
   `main_chipset` varchar(255) DEFAULT NULL COMMENT '主芯片组',
   `audio_chip` varchar(255) DEFAULT NULL COMMENT '音频芯片',
   `memory_type` varchar(255) DEFAULT NULL COMMENT '内存类型',
@@ -84,6 +86,7 @@ CREATE TABLE `mainboard` (
   `shape_size` varchar(255) DEFAULT NULL COMMENT '外形尺寸',
   `power_supply_socket` varchar(255) DEFAULT NULL COMMENT '电源插口',
   `power_supply_mode` varchar(255) DEFAULT NULL COMMENT '供电模式',
+  `img` varchar(255) DEFAULT NULL COMMENT '图片地址',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='主板表';
 
@@ -96,11 +99,12 @@ CREATE TABLE `memorybar` (
   `brands` varchar(255) DEFAULT NULL COMMENT '品牌名',
   `name` varchar(255) DEFAULT NULL COMMENT '系列名',
   `model` varchar(255) DEFAULT NULL COMMENT '产品型号名',
-  `price` decimal(10,2) DEFAULT NULL COMMENT '价格',
+  `price` varchar(255) DEFAULT NULL COMMENT '价格',
   `applicable_type` varchar(255) DEFAULT NULL COMMENT '适用类型',
   `memory_capacity` varchar(255) DEFAULT NULL COMMENT '内存容量',
   `memory_type` varchar(255) DEFAULT NULL COMMENT '内存类型',
   `main_frequency_of_memory` varchar(255) DEFAULT NULL COMMENT '内存主频',
+  `img` varchar(255) DEFAULT NULL COMMENT '图片地址',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='内存条表';
 
@@ -113,7 +117,7 @@ CREATE TABLE `power` (
   `brands` varchar(255) DEFAULT NULL COMMENT '品牌名',
   `name` varchar(255) DEFAULT NULL COMMENT '系列名',
   `model` varchar(255) DEFAULT NULL COMMENT '产品型号名',
-  `price` decimal(10,2) DEFAULT NULL COMMENT '价格',
+  `price` varchar(255) DEFAULT NULL COMMENT '价格',
   `power_type` varchar(255) DEFAULT NULL COMMENT '电源类型',
   `out_line_type` varchar(255) DEFAULT NULL COMMENT '出线类型',
   `rated_power` varchar(255) DEFAULT NULL COMMENT '额定功率',
@@ -122,6 +126,7 @@ CREATE TABLE `power` (
   `hard_disk_interface` varchar(255) DEFAULT NULL COMMENT '硬盘接口',
   `pfc_type` varchar(255) DEFAULT NULL COMMENT 'PFC类型',
   `conversion_efficiency` varchar(255) DEFAULT NULL COMMENT '转换效率',
+  `img` varchar(255) DEFAULT NULL COMMENT '图片地址',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='电源表';
 
@@ -134,7 +139,7 @@ CREATE TABLE `videocard` (
   `brands` varchar(255) DEFAULT NULL COMMENT '品牌名',
   `name` varchar(255) DEFAULT NULL COMMENT '系列名',
   `model` varchar(255) DEFAULT NULL COMMENT '产品型号名',
-  `price` decimal(10,2) DEFAULT NULL COMMENT '价格',
+  `price` varchar(255) DEFAULT NULL COMMENT '价格',
   `graphics_card_type` varchar(255) DEFAULT NULL COMMENT '显卡类型',
   `video_card_chip` varchar(255) DEFAULT NULL COMMENT '显卡芯片',
   `core_frequency` varchar(255) DEFAULT NULL COMMENT '核心频率',
@@ -143,5 +148,6 @@ CREATE TABLE `videocard` (
   `memory_interface` varchar(255) DEFAULT NULL COMMENT '显存位宽',
   `power_interface` varchar(255) DEFAULT NULL COMMENT '电源接口',
   `power_supply_mode` varchar(255) DEFAULT NULL COMMENT '供电模式',
+  `img` varchar(255) DEFAULT NULL COMMENT '图片地址',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='显卡表';

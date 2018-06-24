@@ -1,0 +1,18 @@
+
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql:///afds
+        username: root
+        password: root
+        
+    jpa:
+        database: mysql
+        show-sql: true
+        hibernate.ddl-auto: update
+    
+    freemarker:
+        suffix: .html
+        cache: false
+        templateEncoding: UTF-8
+        templateLoaderPath: classpath:/templates/, classpath:/templates/bootstrap/, classpath:/templates/jquery/

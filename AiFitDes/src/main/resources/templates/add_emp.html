@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加员工</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<script src="/jquery/jquery-3.3.1.min.js"></script>
+		<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css">
+		<script src="/bootstrap/js/bootstrap.min.js"></script>
+		<style>
+		    body {
+		        margin-top: 50px;
+		    }
+		    .footer {
+			    border-top: 2px solid #e5e5e5;
+			    color: #777;
+			    padding: 15px 0;
+			    background-color: #f5f5f5;
+			}
+			.panel {
+			    margin-left: 5%;
+			    margin-right: 5%;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 头部导航栏开始 -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+					<a class="navbar-brand" href="#">Zhgy</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<span class="glyphicon glyphicon-th"></span>&nbsp;&nbsp;部门管理
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+							    <li><a href="/alldep">查看所有部门</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="/adddep">添加部门</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="/uoddep">修改/删除部门</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;员工管理 
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+							    <li><a href="/allemp">查看所有员工</a></li>
+								<li role="separator" class="divider"></li>
+								<li class="active"><a href="/addemp">添加员工</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="/uodemp">修改/删除员工</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 头部导航栏结束 -->
+		
+		<!-- 导航条 -->
+		<ol class="breadcrumb">
+		    <li><a href="#">员工管理</a></li>
+		    <li class="active">添加员工</li>
+		</ol>
+		<!-- 导航条结束 -->
+		
+		<!-- 添加功能块 -->
+		<div class="panel panel-default">
+		    <div class="panel-heading">
+		      <h3 class="panel-title">添加员工<small>填写一些必须的内容后即可添加一个员工</small></h3>
+		    </div>
+		    <div class="panel-body">
+		    	<div class="container">
+			        <div class="row">
+			            <div style="margin-top: 16px;" class="col-xs-12 col-md-6">
+					    	<div class="input-group">
+							    <span class="input-group-addon">输入员工姓名</span>
+							    <input id="emp_name" type="text" class="form-control">
+							</div>
+						</div>
+						<div style="margin-top: 16px;" class="col-xs-12 col-md-6">
+					    	<div class="input-group">
+							    <span class="input-group-addon">输入电话号码</span>
+							    <input id="emp_phone" type="text" class="form-control">
+							</div>
+						</div>
+						<div style="margin-top: 16px;" class="col-xs-6 col-md-4">
+							<div style="width: 100%;" class="btn-group">
+								<button id="emp_dep" type="button" class="btn btn-default dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    选择该员工所在部门
+								    <span class="caret"></span>
+								</button>
+								<ul id="emp_dep_ul" class="dropdown-menu">
+								    <#list alldep as c>
+								        <li><a href="#">${c.name}</a></li>
+									</#list>
+								</ul>
+								<script>
+								    $(function(){
+								        var list = document.getElementById("emp_dep_ul");
+										for(var i=1; i<list.childNodes.length; i++){
+										    list.childNodes[i].onclick = function(){
+											    document.getElementById('emp_dep').innerText = this.innerText;
+										    }
+										}
+								    });
+								</script>
+						    </div>
+						</div>
+						<div style="margin-top: 16px;" class="col-xs-6 col-md-4">
+							<div style="width: 100%;" class="btn-group">
+								<button id="head_emp" type="button" class="btn btn-default dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    选择该员工所属领导
+								    <span class="caret"></span>
+								</button>
+								<ul id="head_emp_ul" class="dropdown-menu">
+								    <#list allemp as c>
+								        <li><a href="#">${c.name}</a></li>
+									</#list>
+								</ul>
+								<script>
+								    $(function(){
+								        var list = document.getElementById("head_emp_ul");
+										for(var i=1; i<list.childNodes.length; i++){
+										    list.childNodes[i].onclick = function(){
+											    document.getElementById('head_emp').innerText = this.innerText;
+										    }
+										}
+								    });
+								</script>
+						    </div>
+						</div>
+						<div style="margin-top: 16px;" class="col-xs-6 col-md-4">
+							<div style="width: 100%;" class="btn-group">
+								<button id="emp_sex" type="button" class="btn btn-default dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								    选择该员工的性别
+								    <span class="caret"></span>
+								</button>
+								<ul id="emp_sex_ul" class="dropdown-menu">
+								    <li><a href="#">男</a></li>
+								    <li><a href="#">女</a></li>
+								</ul>
+								<script>
+								    $(function(){
+								        var list = document.getElementById("emp_sex_ul");
+										for(var i=1; i<list.childNodes.length; i++){
+										    list.childNodes[i].onclick = function(){
+											    document.getElementById('emp_sex').innerText = this.innerText;
+										    }
+										}
+								    });
+								</script>
+						    </div>
+						</div>
+					</div>
+					<div class="row" style="margin-top: 16px;">
+						<div id="Myalert" class="alert alert-danger" role="alert">
+						    <a id="alertmessage" href="#" class="alert-link">您的数据没有通过验证，请保证填写了有效的不为空数据或选择了所有应该选择的选项。</a>
+						</div>
+					</div>
+					<div class="row" style="margin-top: 16px;">
+					    <div class="col-xs-6">
+					        <button id="sub" type="button" class="btn btn-success btn-block">提交</button>
+					    </div>
+					    <div class="col-xs-6">
+					        <button id="reset" type="button" class="btn btn-warning btn-block">重置</button>
+					    </div>
+					</div>
+			    </div>
+		    </div>
+		</div>
+		<!-- 添加功能块结束 -->
+		
+		<!-- 页脚开始 -->
+		<div class="footer">
+		    <div class="container">
+		        <div class="row footer-bottom">
+		            <ul class="list-inline text-center">
+		                <li>Zhgy 2018.6.5 - Software All Rights Reserved.</li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+		<!-- 页脚结束 -->
+		
+		<script>
+		    $('#Myalert').hide();
+		    $('#sub').on('click', function () {
+		        // 提交
+		        var emp_name = $('#emp_name').val(); // 员工姓名
+		        var emp_phone = $('#emp_phone').val(); // 员工联系方式
+		        var emp_dep = document.getElementById('emp_dep').innerText; // 员工所在部门
+		        var head_emp = document.getElementById('head_emp').innerText; // 员工所属领导
+		        var emp_sex = document.getElementById('emp_sex').innerText; // 员工性别
+		        if(emp_name == '' || emp_phone == '' || emp_dep=="选择该员工所在部门" || head_emp=="选择该员工所属领导" || emp_sex == "选择该员工的性别"){
+		            $('#Myalert').show();
+		            return;
+		        }
+		        jQuery.ajax({
+			        url: "/emp/add",
+			        data:{
+			        	"name": emp_name,
+			        	"head_name": head_emp,
+			        	"sex": emp_sex,
+			        	"phone": emp_phone,
+			        	"dep_name": emp_dep 
+			        },
+			        type: 'POST',
+			        success: function (response) {
+			            $('#Myalert').show();
+			            document.getElementById('alertmessage').innerText = response;
+		                $('#emp_name').val("");
+				        $('#emp_phone').val("");
+				        document.getElementById('emp_dep').innerText = "选择该员工所在部门"; 
+				        document.getElementById('head_emp').innerText = "选择该员工所属领导"; 
+				        document.getElementById('emp_sex').innerText = "选择该员工的性别"; 
+			        }
+		        });
+		    });
+		    
+		    $('#reset').on('click', function () {
+		        // 重置
+		        $('#emp_name').val("");
+		        $('#emp_phone').val("");
+		        document.getElementById('emp_dep').innerText = "选择该员工所在部门"; 
+		        document.getElementById('head_emp').innerText = "选择该员工所属领导"; 
+		        document.getElementById('emp_sex').innerText = "选择该员工的性别"; 
+		        $('#Myalert').hide();
+		    });
+		</script>
+	</body>
+</html>
+
