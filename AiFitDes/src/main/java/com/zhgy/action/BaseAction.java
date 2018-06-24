@@ -8,8 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class BaseAction {
@@ -19,12 +19,14 @@ public class BaseAction {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String openMain(Model model){
-		ArrayList<CpuEntity> list = cpuService.getAll();
+		Integer now_page = 1;
+		Integer page_size = 100;
+		List<CpuEntity> list = cpuService.getCPUByCondition("price<1000", now_page, page_size);
 		for(int i=0; i<list.size(); i++){
-			CpuEntity ce = list.get(i);
-			System.out.println(ce.getId()+" "+ce.getBrands());
+			System.out.println(list.get(i).getId() + " " + list.get(i).getPrice());
 		}
-		return "all_dep";
+		return "index";
 	}
 
 }
+// 1761 + 2390 + 4091 + 1486 + 549 + 3837 =  14114

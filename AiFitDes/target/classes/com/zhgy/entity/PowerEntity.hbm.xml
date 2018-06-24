@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zhgy.entity.PowerEntity" table="power" schema="afds">
+        <id name="id">
+            <column name="id" sql-type="varchar(50)" length="50"/>
+        </id>
+        <property name="brands">
+            <column name="brands" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="model">
+            <column name="model" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="powerType">
+            <column name="power_type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="outLineType">
+            <column name="out_line_type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="ratedPower">
+            <column name="rated_power" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="maxPower">
+            <column name="max_power" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="motherboardInterface">
+            <column name="motherboard_interface" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="hardDiskInterface">
+            <column name="hard_disk_interface" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="pfcType">
+            <column name="pfc_type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="conversionEfficiency">
+            <column name="conversion_efficiency" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="img">
+            <column name="img" sql-type="varchar(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

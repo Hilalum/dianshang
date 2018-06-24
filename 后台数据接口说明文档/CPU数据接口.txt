@@ -1,0 +1,39 @@
+/**
+ * Class Name: CpuActionData
+ * 功能：该类提供了返回JSON格式的数据接口。
+ * 方法名：
+ *     1.getAllBrands();
+ *         访问地址：.../cpu/all_brands
+ *         携带参数：无
+ *         请求类型：POST
+ *         说明：该方法返回CPU的所有品牌。
+ *
+ *     2.getAllNameByBrand(brand_name)
+ *         访问地址：.../cpu/all_name_by_brand
+ *         携带参数：brand_name - 用于指明一个品牌的名称
+ *         请求类型：POST
+ *         说明：该方法返回 CPU 指定 品牌名 的所有 系列名
+ *
+ *     3.getAllModelByBrandAndName(brand_name, name)
+ *         访问地址：.../cpu/all_model_by_brand_name
+ *         携带参数：brand_name - 用于指明一个品牌的名称
+ *                   name - 用于指明一个品牌下的系列名
+ *         请求类型：POST
+ *         说明：该方法返回CPU中指定品牌下系列的所有产品名
+ *
+ *     4.getAllByPageNumAndSize(pageNum, pageSize)
+ *         访问地址：.../cpu/all_by_num_size
+ *         携带参数：pageNum - 需要返回的当前页数值
+ *                   pageSize - 当前页面的数据容量
+ *         请求类型：POST
+ *         说明：该方法返回无选择条件的CPU信息
+ *
+ *     5.getAllByWherePageNumAndSize(where_context, pageNum, pageSize)
+ *         访问地址：.../cpu/all_by_condition
+ *         携带参数：where_context - 数据筛选条件，如（price<1000 and price not like '%万%'）
+ *                   pageNum - 需要返回的当前页数值
+ *                   pageSize - 当前页面的数据容量
+ *         请求类型：POST
+ *         说明：该方法返回按照选择的条件返回相应的CPU信息
+ *
+ * */

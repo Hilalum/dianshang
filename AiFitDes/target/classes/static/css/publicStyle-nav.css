@@ -1,0 +1,17 @@
+body{background-color: #eee; margin-top: 50px; margin-bottom: 50px;}
+.public-search-input{background-color: #c3c3c3; border: none;}
+.public-broder{margin-right: 10px; padding-top: 5px; padding-bottom: 5px; padding-left: 8px; padding-right: 8px; border: 1px solid #555963;}
+.public-line-height{color: #f5f5f5; line-height: 50px; margin-right: 8px;}
+.public-search{margin-right: 3px; background-color: transparent; color: #fff;}
+.public-broder:hover{color: #00a4ff; background-color: transparent;}
+.public-line-height:hover{color: #00a4ff; background-color: transparent;}
+.public-search:hover{color: #00a4ff; background-color: transparent;}
+.public-icon{height: 34px; color: #fff; border: none;}
+.public-icon:hover{color: #00a4ff; border: none; background-color: transparent;}
+.public-btn-left{float: left;}
+.public-img{background-color: #2b2b2b; width: 100%; padding-right: 0px; padding-left: 0px;}
+.public-img img{width: 100%;}
+.public-footer{background-color: #2b2b2b; height: 50px; box-shadow:0px 2px 0px #000000 inset;}
+.public-footer hr{border-top: 1px solid #404040; margin-top: 10px; margin-bottom: 8px;}
+.public-footer span{color: #a7a7a7; font-size: 8px;}
+#userSource button:before{color: #fff;}

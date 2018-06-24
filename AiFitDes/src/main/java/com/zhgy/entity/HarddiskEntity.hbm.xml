@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zhgy.entity.HarddiskEntity" table="harddisk" schema="afds">
+        <id name="id">
+            <column name="id" sql-type="varchar(50)" length="50"/>
+        </id>
+        <property name="brands">
+            <column name="brands" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="model">
+            <column name="model" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="storageCapacity">
+            <column name="storage_capacity" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="harddiskSize">
+            <column name="harddisk_size" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="interfaceType">
+            <column name="Interface_type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="cache">
+            <column name="cache" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="rwspeed">
+            <column name="rwspeed" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="wspeed">
+            <column name="wspeed" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="faultFreeTime">
+            <column name="fault_free_time" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="searchTime">
+            <column name="search_time" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="applicableType">
+            <column name="applicable_type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="harddiskSizeP">
+            <column name="harddisk_size_p" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="harddiskCapacity">
+            <column name="harddisk_capacity" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="singleDiskCapacity">
+            <column name="single_disk_capacity" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="cacheP">
+            <column name="cache_p" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="speed">
+            <column name="speed" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="interfaceTypeP">
+            <column name="interface_type_p" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="interfaceRate">
+            <column name="interface_rate" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="img">
+            <column name="img" sql-type="varchar(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

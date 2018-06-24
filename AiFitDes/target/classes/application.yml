@@ -15,4 +15,4 @@ spring:
         suffix: .html
         cache: false
         templateEncoding: UTF-8
-        templateLoaderPath: classpath:/templates/, classpath:/templates/bootstrap/, classpath:/templates/jquery/
+        templateLoaderPath: classpath:/templates/, classpath:/templates/bootstrap/, classpath:/templates/jquery/, classpath:/templates/css/, classpath:/templates/js/, classpath:/templates/images/

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zhgy.entity.CpuEntity" table="cpu" schema="afds">
+        <id name="id">
+            <column name="id" sql-type="varchar(255)"/>
+        </id>
+        <property name="brands">
+            <column name="brands" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="model">
+            <column name="model" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="applicableType">
+            <column name="applicable_type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="cpuSeries">
+            <column name="cpu_series" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="cpuMainFrequency">
+            <column name="cpu_main_frequency" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="ghz">
+            <column name="ghz" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="slotType">
+            <column name="slot_type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="twoLevelCaching">
+            <column name="two_level_caching" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="coreQuantity">
+            <column name="core_quantity" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="threadNumber">
+            <column name="thread_number" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="img">
+            <column name="img" sql-type="varchar(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
