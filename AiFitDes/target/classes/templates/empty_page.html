@@ -52,7 +52,7 @@
                                     var main = $('#mainboard_ul');
                                     for(var i=0; i<response.length; i++){
                                         var brands = response[i].BrandName;
-                                        var link = $("<li><a href=\"/board/main?name="+brands+"\">"+brands+"</a></li>");
+                                        var link = $("<li><a href=\"/mainboardhtml/open?name="+brands+"\">"+brands+"</a></li>");
                                         main.append(link);
                                     }
                                 },

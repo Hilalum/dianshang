@@ -13,7 +13,7 @@
 	</property>
 	<!-- 指定连接数据库的url，hibernate连接的数据库名 -->
 	<property name="connection.url">
-		jdbc:mysql://localhost/afds
+		jdbc:mysql://localhost:3306/afds?serverTimezone=UTC
 	</property>
 	<!-- 指定连接数据库的编码 -->
 	<property name="connection.characterEncoding">utf8</property>
