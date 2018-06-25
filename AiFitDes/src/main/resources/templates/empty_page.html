@@ -8,11 +8,16 @@
 
     <title>AiZJ | 主页</title>
 
+    <script src="js/jquery-2.1.1.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <script>
+        var link = 'http://localhost:8080'
+    </script>
 
 </head>
 
@@ -31,17 +36,37 @@
                         </a>
                     </div>
                     <div class="logo-element">
-                        IN+
+                        AiZJ
                     </div>
                 </li>
                 <li>
                     <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">主板</span> <span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="index.html">Dashboard v.1</a></li>
+                    <ul id="mainboard_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/mainboard/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#mainboard_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/mainboardhtml/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
+
+                        <!--<li><a href="/board/main?name="+brands+"">Dashboard v.1</a></li>
                         <li><a href="dashboard_2.html">Dashboard v.2</a></li>
                         <li><a href="dashboard_3.html">Dashboard v.3</a></li>
                         <li><a href="dashboard_4_1.html">微星</a></li>
-                        <li><a href="dashboard_5.html">技嘉<span class="label label-primary pull-right">推荐</span></a></li>
+                        <li><a href="dashboard_5.html">技嘉<span class="label label-primary pull-right">推荐</span></a></li>-->
                     </ul>
                 </li>
                 <li>
@@ -203,7 +228,7 @@
                 <div class="col-sm-8">
                     <div class="title-action">
                         <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">综合排序 <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu pull-right">
                                 <li><a href="buttons.html#">价格从低到高</a></li>
                                 <li><a href="buttons.html#" class="font-bold">价格从高到低</a></li>
                                 <li><a href="buttons.html#">销量</a></li>

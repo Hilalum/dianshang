@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class BaseAction {
+@RequestMapping(value = "/cpuhtml", method = RequestMethod.GET)
+public class CPUBoardAction {
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String openMain(Model model){
-		return "empty_page";
-	}
-
+    @RequestMapping(value = "/open", method = RequestMethod.GET)
+    public String openHTML(@RequestParam("name") String name, Model model){
+        return name.toString();
+    }
 }
-// 1761 + 2390 + 4091 + 1486 + 549 + 3837 =  14114
