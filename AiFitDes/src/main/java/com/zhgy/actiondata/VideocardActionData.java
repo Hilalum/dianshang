@@ -72,6 +72,60 @@ import java.util.List;
 @RequestMapping(value = "/videocard", method = RequestMethod.POST)
 public class VideocardActionData {
 
+    private String help = "/**\n" +
+            " * Class Name: VideocardActionData\n" +
+            " * 功能：该类提供了返回JSON格式的数据接口。\n" +
+            " * 方法名：\n" +
+            " *     1.getAllBrands();\n" +
+            " *         访问地址：.../videocard/all_brands\n" +
+            " *         携带参数：无\n" +
+            " *         请求类型：POST\n" +
+            " *         说明：该方法返回videocard的所有品牌。\n" +
+            " *\n" +
+            " *     2.getAllNameByBrand(brand_name)\n" +
+            " *         访问地址：.../videocard/all_name_by_brand\n" +
+            " *         携带参数：brand_name - 用于指明一个品牌的名称\n" +
+            " *         请求类型：POST\n" +
+            " *         说明：该方法返回 videocard 指定 品牌名 的所有 系列名\n" +
+            " *\n" +
+            " *     3.getAllModelByBrandAndName(brand_name, name)\n" +
+            " *         访问地址：.../videocard/all_model_by_brand_name\n" +
+            " *         携带参数：brand_name - 用于指明一个品牌的名称\n" +
+            " *                   name - 用于指明一个品牌下的系列名\n" +
+            " *         请求类型：POST\n" +
+            " *         说明：该方法返回videocard中指定品牌下系列的所有产品名\n" +
+            " *\n" +
+            " *     4.getAllByPageNumAndSize(pageNum, pageSize)\n" +
+            " *         访问地址：.../videocard/all_by_num_size\n" +
+            " *         携带参数：pageNum - 需要返回的当前页数值\n" +
+            " *                   pageSize - 当前页面的数据容量\n" +
+            " *         请求类型：POST\n" +
+            " *         说明：该方法返回无选择条件的videocard信息\n" +
+            " *\n" +
+            " *     5.getAllByWherePageNumAndSize(where_context, pageNum, pageSize)\n" +
+            " *         访问地址：.../videocard/all_by_condition\n" +
+            " *         携带参数：where_context - 数据筛选条件，如（price<1000 and price not like '%万%'）\n" +
+            " *                   pageNum - 需要返回的当前页数值\n" +
+            " *                   pageSize - 当前页面的数据容量\n" +
+            " *         请求类型：POST\n" +
+            " *         说明：该方法返回按照选择的条件返回相应的videocard信息\n" +
+            " *\n" +
+            " *     6.deleteById(id)\n" +
+            " *         访问地址：.../videocard/delete_by_id\n" +
+            " *         携带参数：id - 需要删除的id\n" +
+            " *         请求类型：POST\n" +
+            " *         说明：该方法返回一个字符串，字符串的格式为 信号#原因 例：success#删除成功！或 error#删除失败！原因。。。\n" +
+            " *               开发者使用时首先对返回值进行split('#')处理，先判断split('#')[0]的状态，在输出split('#')[1]中的提示。\n" +
+            " *               split('#')[0] = success为删除成功，split('#')[1] = error为删除失败\n" +
+            " *\n" +
+            " *     7.getOneById(id)\n" +
+            " *         访问地址： .../videocard/get_one_by_id\n" +
+            " *         携带参数：id - 需要查询的id\n" +
+            " *         请求类型：POST\n" +
+            " *         说明：该方法按照ID返回一个videocard的信息。如没有找到相关数据，返回空JSON列表。\n" +
+            " *\n" +
+            " * */";
+
     @Autowired
     private VideocardService videocardService;
 
@@ -212,4 +266,12 @@ public class VideocardActionData {
         jsonArray.put(jo);
         return jsonArray.toString();
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/help", method = RequestMethod.GET)
+    public String getHelpGet(){ return help; }
+
+    @ResponseBody
+    @RequestMapping(value = "/help", method = RequestMethod.POST)
+    public String getHelpPost(){ return help; }
 }

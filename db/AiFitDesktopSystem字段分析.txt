@@ -112,3 +112,5 @@ create table power( 电源表
     conversion_efficiency转换效率
     img 图片路径
 );
+
+select price from cpu where price<2000 and price not like '%-%' and price not like '%万%' and price not like '停产' and price not like '即将上市' and price not like '暂无报价' and price not like '价格面议' and price not like '概念产品' ORDER BY CONVERT(price,SIGNED) desc;
