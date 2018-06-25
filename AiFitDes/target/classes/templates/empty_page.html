@@ -61,51 +61,126 @@
                                 }
                             });
                         </script>
-
-                        <!--<li><a href="/board/main?name="+brands+"">Dashboard v.1</a></li>
-                        <li><a href="dashboard_2.html">Dashboard v.2</a></li>
-                        <li><a href="dashboard_3.html">Dashboard v.3</a></li>
-                        <li><a href="dashboard_4_1.html">微星</a></li>
-                        <li><a href="dashboard_5.html">技嘉<span class="label label-primary pull-right">推荐</span></a></li>-->
                     </ul>
                 </li>
                 <li>
                     <a href="empty_page.html#"><i class="fa fa-cube"></i> <span class="nav-label">CPU</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="graph_flot.html">Flot Charts</a></li>
-                        <li><a href="graph_morris.html">Morris.js Charts</a></li>
-                        <li><a href="graph_rickshaw.html">Rickshaw Charts</a></li>
-                        <li><a href="graph_chartjs.html">Chart.js</a></li>
-                        <li><a href="graph_chartist.html">Chartist</a></li>
-                        <li><a href="c3.html">c3 charts</a></li>
-                        <li><a href="graph_peity.html">Peity Charts</a></li>
-                        <li><a href="graph_sparkline.html">Sparkline Charts</a></li>
+                    <ul id="cpu_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/cpu/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#cpu_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/cpuhtml/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
                     </ul>
                 </li>
                 <li>
                     <a href="mailbox.html"><i class="fa fa-plug"></i> <span class="nav-label">电源</span><span class="label label-warning pull-right">16/24</span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="mailbox.html">Inbox</a></li>
-                        <li><a href="mail_detail.html">Email view</a></li>
-                        <li><a href="mail_compose.html">Compose email</a></li>
-                        <li><a href="email_template.html">Email templates</a></li>
+                    <ul id="power_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/power/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#power_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/powerhtml/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
                     </ul>
                 </li>
                 <li>
-                    <a href="metrics.html"><i class="fa fa-yelp"></i> <span class="nav-label">GPU</span>  </a>
+                    <a href="metrics.html"><i class="fa fa-yelp"></i> <span class="nav-label">GPU</span> <span class="fa arrow"></span> </a>
+                    <ul id="videocard_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/videocard/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#videocard_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/videocard/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
+                    </ul>
                 </li>
                 <li>
-                    <a href="widgets.html"><i class="fa fa-ioxhost"></i> <span class="nav-label">内存条</span></a>
+                    <a href="widgets.html"><i class="fa fa-ioxhost"></i> <span class="nav-label">内存条</span><span class="fa arrow"></span></a>
+                    <ul id="memorybar_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/memorybar/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#memorybar_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/memorybarhtml/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
+                    </ul>
                 </li>
                 <li>
                     <a href="empty_page.html#"><i class="fa fa-edit"></i> <span class="nav-label">硬盘</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="form_basic.html">Basic form</a></li>
-                        <li><a href="form_advanced.html">Advanced Plugins</a></li>
-                        <li><a href="form_wizard.html">Wizard</a></li>
-                        <li><a href="form_file_upload.html">File Upload</a></li>
-                        <li><a href="form_editors.html">Text Editor</a></li>
-                        <li><a href="form_markdown.html">Markdown</a></li>
+                    <ul id="harddisk_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/harddisk/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#harddisk_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/harddiskhtml/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
                     </ul>
                 </li>
                 

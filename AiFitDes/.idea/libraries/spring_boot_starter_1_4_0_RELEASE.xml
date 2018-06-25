@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="spring-boot-starter-1.4.0.RELEASE">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-starter-1.4.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-starter-aop-1.4.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-starter-data-jpa-1.4.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-starter-freemarker-1.4.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-starter-jdbc-1.4.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-starter-logging-1.4.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-starter-tomcat-1.4.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-boot-starter-web-1.4.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
