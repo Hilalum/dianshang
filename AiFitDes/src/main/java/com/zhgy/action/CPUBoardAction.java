@@ -12,6 +12,7 @@ public class CPUBoardAction {
 
     @RequestMapping(value = "/open", method = RequestMethod.GET)
     public String openHTML(@RequestParam("name") String name, Model model){
-        return name.toString();
+        model.addAttribute("name", name);
+        return "cpu";
     }
 }

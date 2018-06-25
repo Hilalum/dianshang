@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AiZJ | CPU</title>
+
+    <script src="/js/jquery-2.1.1.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <script>
+        var link = 'http://localhost:8080';
+    </script>
+
+</head>
+
+<body class="">
+
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="empty_page.html#">
+                            <span class="clear"> </span>
+                            <span class="block m-t-xs"> <H1><strong class="font-bold">爱装机</strong></H1></span>
+                        </a>
+                    </div>
+                    <div class="logo-element">
+                        AiZJ
+                    </div>
+                </li>
+                <li>
+                    <a><i class="fa fa-th-large"></i> <span class="nav-label">主板</span> <span class="fa arrow"></span></a>
+                    <ul id="mainboard_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/mainboard/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#mainboard_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/mainboardhtml/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
+                    </ul>
+                </li>
+                <li>
+                    <a><i class="fa fa-cube"></i> <span class="nav-label">CPU</span><span class="fa arrow"></span></a>
+                    <ul id="cpu_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/cpu/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#cpu_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/cpuhtml/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
+                    </ul>
+                </li>
+                <li>
+                    <a><i class="fa fa-plug"></i> <span class="nav-label">电源</span><span class="label label-warning pull-right">16/24</span></a>
+                    <ul id="power_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/power/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#power_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/powerhtml/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
+                    </ul>
+                </li>
+                <li>
+                    <a><i class="fa fa-yelp"></i> <span class="nav-label">GPU</span> <span class="fa arrow"></span> </a>
+                    <ul id="videocard_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/videocard/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#videocard_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/videocardhtml/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
+                    </ul>
+                </li>
+                <li>
+                    <a><i class="fa fa-ioxhost"></i> <span class="nav-label">内存条</span><span class="fa arrow"></span></a>
+                    <ul id="memorybar_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/memorybar/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#memorybar_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/memorybarhtml/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
+                    </ul>
+                </li>
+                <li>
+                    <a><i class="fa fa-edit"></i> <span class="nav-label">硬盘</span><span class="fa arrow"></span></a>
+                    <ul id="harddisk_ul" class="nav nav-second-level collapse">
+                        <script>
+                            jQuery.ajax({
+                                url: link+'/harddisk/all_brands',
+                                method: 'POST',
+                                dataType: 'json',
+                                data:{},
+                                success: function (response) {
+                                    var main = $('#harddisk_ul');
+                                    for(var i=0; i<response.length; i++){
+                                        var brands = response[i].BrandName;
+                                        var link = $("<li><a href=\"/harddiskhtml/open?name="+brands+"\">"+brands+"</a></li>");
+                                        main.append(link);
+                                    }
+                                },
+                                complete: function(XMLHttpRequest,status){
+                                    if(status=="timeout"){}
+                                }
+                            });
+                        </script>
+                    </ul>
+                </li>
+
+                <li class="landing_link">
+                    <a target="_blank" href="landing.html"><i class="fa fa-star"></i> <span class="nav-label">智能推荐</span> <span class="label label-warning pull-right">NEW</span></a>
+                </li>
+                <li class="special_link">
+                    <a href="package.html"><i class="fa fa-database"></i> <span class="nav-label">更多</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="empty_page.html#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" action="search_results.html">
+                        <div class="form-group">
+                            <input type="text" placeholder="搜索机型" class="form-control" name="top-search" id="top-search">
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">致力于让您轻松装机</span>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="empty_page.html#">
+                            <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <div class="dropdown-messages-box">
+                                    <div class="media-body">
+
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="mailbox.html">
+                                        <i class="fa fa-shopping-cart"></i> <strong>进入购物车结算</strong>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="empty_page.html#">
+                            <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="mailbox.html">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i>  16 新消息
+                                        <span class="pull-right text-muted small">4 分钟前</span>
+                                    </div>
+                                </a>
+                            </li>
+
+
+                            <li class="divider"></li>
+                            <li>
+                                <div class="text-center link-block">
+                                    <a href="notifications.html">
+                                        <strong>消息系统</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <button  class="btn btn-primary" data-toggle="modal" data-target="#myModal">登录</button>
+                        <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                                        <h1 class="modal-title">欢迎登录</h1>
+                                        <small class="font-bold">装机更轻松，硬件有折扣。</small>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group"><label>账号</label> <input type="email" placeholder="请输入邮箱" class="form-control"></div>
+                                        <div class="form-group"><label>密码</label> <input type="password" placeholder="请输入密码" class="form-control"></div>
+                                        <div>
+                                            <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>登录</strong></button>
+                                            <label> <input type="checkbox" class="i-checks"> 记住账号</label>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a><small>没有账号，去注册</small></a>
+                                        <a href="register.html"><small>没有账号，去注册</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-sm-4">
+                <h1> <strong>AiZJ</strong></h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <strong>CPU |${name}</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-sm-8">
+                <div class="title-action">
+                    <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">综合排序 <span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="buttons.html#">价格从低到高</a></li>
+                        <li><a href="buttons.html#" class="font-bold">价格从高到低</a></li>
+                        <li><a href="buttons.html#">销量</a></li>
+                        <li class="divider"></li>
+                        <li><a href="buttons.html#">默认排序</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper wrapper-content">
+            <div class="middle-box text-center animated fadeInRightBig">
+                <h3 class="font-bold">热门商品</h3>
+                <div class="error-desc">
+                    商品页面
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                <strong>AiZJ</strong>
+            </div>
+            <div>
+                <strong>Copyright</strong> 爱装机 &copy; 2018-2019
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Mainly scripts -->
+<script src="/js/jquery-2.1.1.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="/js/inspinia.js"></script>
+<script src="/js/plugins/pace/pace.min.js"></script>
+
+
+</body>
+
+</html>
